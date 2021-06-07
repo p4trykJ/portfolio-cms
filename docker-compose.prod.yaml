@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  portfolio-cms:
+    restart: always
+    container_name: portfolio-cms
+    image: portfolio-cms
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+      args:
+        - PORT=${PORT}
+    ports:
+      - 1338:${PORT}
