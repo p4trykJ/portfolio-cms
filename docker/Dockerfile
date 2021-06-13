@@ -13,8 +13,6 @@ RUN yarn install
 
 COPY ./app .
 
-COPY .env.prod .env
-
 ENV NODE_ENV=production  NODE_OPTIONS=--max-old-space-size=4096
 
 RUN yarn build
